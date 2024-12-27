@@ -13,7 +13,7 @@ const client = new QueryClient();
 const Providers = ({ children }: Props) => {
     return (
         <QueryClientProvider client={client}>
-            <ClerkProvider>
+            <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
                 {children}
             </ClerkProvider>
         </QueryClientProvider>
